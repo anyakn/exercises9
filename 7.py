@@ -23,6 +23,8 @@ class TrafficLight:
             else:
                 index_next = 0
                 self.chain.append(self.permissible_values[index_next])
+        if len(self.chain) > 2:
+            self.chain = self.chain[-2:]
         self.current_signal = self.permissible_values[index_next]
 
 
